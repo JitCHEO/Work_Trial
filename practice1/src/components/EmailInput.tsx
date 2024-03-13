@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import '@radix-ui/themes/styles.css';
-import { Flex, TextArea, Text, Button } from '@radix-ui/themes';
+import { Flex, TextArea, Text} from '@radix-ui/themes';
 
 interface EmailInputProps {
   onEmailChange: (email: string) => void;
@@ -15,9 +14,6 @@ const EmailInput: React.FC<EmailInputProps> = ({ onEmailChange }) => {
     onEmailChange(newEmail);
   };
 
-  const handleSubmit = () => {
-    return null
-  };
 
   return (
     <Flex direction="column" gap="2" style={{maxWidth: 350}}>
@@ -26,8 +22,6 @@ const EmailInput: React.FC<EmailInputProps> = ({ onEmailChange }) => {
             value={email}
             onChange={handleEmailChange}
             placeholder='Enter Email Address' />
-        <Text>Hello from Radix Themes :)</Text>
-        <Button variant='classic' color='red' onClick={handleSubmit}>Let's go</Button>
     </Flex>
     
   );

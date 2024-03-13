@@ -1,17 +1,10 @@
-import React from 'react';
+import Page1 from './pages/Page1';
 import './App.css';
-import EmailInput from './components/EmailInput';
 
 function App() {
-
-  const handleEmailChange = (email:string) => {
-    console.log('Email change', email)
-  }
-
-
   return (
     <div className="App">
-      <EmailInput onEmailChange={handleEmailChange} />
+      <Page1 /> 
     </div>
   );
 }
