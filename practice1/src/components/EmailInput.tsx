@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Flex, TextArea, Text} from '@radix-ui/themes';
+import { Flex, TextFieldInput} from '@radix-ui/themes';
 
 interface EmailInputProps {
   onEmailChange: (email: string) => void;
@@ -8,7 +8,7 @@ interface EmailInputProps {
 const EmailInput: React.FC<EmailInputProps> = ({ onEmailChange }) => {
   const [email, setEmail] = useState('');
 
-  const handleEmailChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newEmail = e.target.value;
     setEmail(newEmail);
     onEmailChange(newEmail);
@@ -18,7 +18,7 @@ const EmailInput: React.FC<EmailInputProps> = ({ onEmailChange }) => {
   return (
     <Flex direction="column" gap="2" style={{maxWidth: 350}}>
         <label>Email:</label>
-        <TextArea 
+        <TextFieldInput
             value={email}
             onChange={handleEmailChange}
             placeholder='Enter Email Address' />

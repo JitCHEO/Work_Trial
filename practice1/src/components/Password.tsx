@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Flex, TextArea, Text } from '@radix-ui/themes';
+import { Flex, TextFieldInput } from '@radix-ui/themes';
 
 interface PasswordInputProps {
   onPasswordChange: (password: string) => void;
@@ -8,7 +8,7 @@ interface PasswordInputProps {
 const PasswordInput: React.FC<PasswordInputProps> = ({ onPasswordChange }) => {
   const [password, setPassword] = useState('');
 
-  const handlePasswordChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newPassword = e.target.value;
     setPassword(newPassword);
     onPasswordChange(newPassword);
@@ -17,7 +17,7 @@ const PasswordInput: React.FC<PasswordInputProps> = ({ onPasswordChange }) => {
   return (
     <Flex direction="column" gap="2" style={{maxWidth: 350}}>
         <label>Password:</label>
-        <TextArea 
+        <TextFieldInput
             value={password}
             onChange={handlePasswordChange}
             placeholder='Password please' />
