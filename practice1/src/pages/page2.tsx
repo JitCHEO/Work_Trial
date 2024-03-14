@@ -1,31 +1,17 @@
-// import React from 'react';
-// import { Button } from '@radix-ui/themes';
-// import EmailInput from '../components/EmailInput';
-// import PasswordInput from '../components/Password';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
+const FormTable: React.FC = () => {
+    const navigate = useNavigate();
 
 
-// const Page2: React.FC = () => {
-//   const handleEmailChange = (email: string) => {
-//     console.log('Email changed:', email);
-//   };
+  return (
+    <>
+      <h1>Form Table</h1>
+      <br />
+      <button onClick={() => navigate(-1)}>Go Back</button>
+    </>
+  );
+};
 
-//   const handleSubmit = () => {
-//     return null;
-//   };
-
-//   const handlePasswordChange = (password: string) => {
-//     console.log('Password:', password);
-//   }
-
-//   return (
-//     <div>
-//       <h1>Page 1</h1>
-//       <EmailInput onEmailChange={handleEmailChange} />
-//       <PasswordInput onPasswordChange={handlePasswordChange} />
-//       <Button variant='classic' color='red' onClick={handleSubmit}>Let's go</Button>
-//     </div>
-//   );
-// };
-
-// export default Page2;
-export {};
+export default FormTable;
