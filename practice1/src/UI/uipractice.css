@@ -1,0 +1,22 @@
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* CSS */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #940f0f;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title{
+    color: aqua;
+}
+
