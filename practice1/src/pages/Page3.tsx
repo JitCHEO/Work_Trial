@@ -17,7 +17,7 @@ const Page3: React.FC = () => {
   return (
     <div>
       <div>
-        <h2>Data Table</h2>
+        <h2 className='text-3xl font-bold underline'>Data Table</h2>
         <table>
           <thead>
             <tr>
@@ -35,8 +35,12 @@ const Page3: React.FC = () => {
           </tbody>
         </table>
 
-        <Button variant='classic' color='red' onClick={() =>navigate("/")}>Go to Page 1</Button>
-
+        <Button 
+            variant='classic' 
+            color='red' 
+            onClick={() =>navigate("/")}
+            className="border border-solid border-black rounded-md p-2"
+            >Go to Page 1</Button>
       </div>
     </div>
   );
