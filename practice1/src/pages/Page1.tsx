@@ -59,7 +59,9 @@ const Page1: React.FC = () => {
                 placeholder="Enter Password here"
             />
             <p>{errors.password && <span>This password field is required</span>}</p>
-            <Button variant='classic' color='red' onClick={() =>navigate("/Page2")}>Go to Page 2</Button>
+            {/* <Button variant='classic' color='red' onClick={() =>navigate("/Page2")}>Go to Page 2</Button> */}
+            <Button variant='classic' color='red' onClick={() =>navigate("/Page3", {state : {email, password}}) }>Go to Page 3</Button>
+
         </Flex>
     </form>
   );
